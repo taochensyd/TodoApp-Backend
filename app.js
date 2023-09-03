@@ -8,6 +8,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Working')
+})
+
 // API Routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/todos', todoRoutes);
